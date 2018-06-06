@@ -24,12 +24,16 @@ $roundness: 20px 0 20px;
 
 $color-btn-names: 'default', 'cool', 'hot';
 $color-btn-values: $main-color, $red, $blue;
+$color-btns: (
+   default: $main-color,
+   cool: $blue,
+   hot : $red
+);
 
-@each $names in $color-btn-names {
-  $i : index($color-btn-names, $names);
-  .btn-#{$names} {
+@each $key, $value  in $color-btns {
+  .btn-#{$key} {
     @extend %btn;
-    background-color: nth($color-btn-values, $i);
+    background-color:$value;
   }
 }
 
