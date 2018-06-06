@@ -18,3 +18,15 @@
     clear: both;
   }
 }
+
+@mixin  imagegrid($qty, $margin) {
+  width:((100% - (($qty) * $margin)) / $qty);
+  &:nth-child(n) {
+    margin-right:$margin;
+    margin-bottom:$margin;
+  }
+  &:nth-child(#{$qty}n) {
+    margin-right:$margin;
+    margin-bottom:$margin;
+  }
+}
