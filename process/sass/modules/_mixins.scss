@@ -30,3 +30,9 @@
     margin-bottom:$margin;
   }
 }
+
+@mixin break($length) {
+   @media (min-width: $length) {
+     @content;
+   }
+}
