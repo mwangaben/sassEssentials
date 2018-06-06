@@ -3,6 +3,7 @@ $color-btn-text: $color-backgrounds;
 $color-btn-default: $main-color;
 $color-btn-hot: $red;
 $color-btn-cool:$blue;
+$roundness: 20px 0 20px;
 
 
 %btn {
@@ -42,7 +43,7 @@ $color-btn-cool:$blue;
     display: block;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
-    border-radius:10px;
+    border-radius:$roundness;
     max-width:100%;
   }
 }
