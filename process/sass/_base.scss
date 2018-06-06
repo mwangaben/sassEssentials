@@ -19,6 +19,15 @@ body {
   margin: 0 auto;
 }
 
+$color-headlines : $blue, $purple, $green, $red, $orange, $yellow;
+
 h1, h2, h3, h4, h5 h6 {
   color: $color_headlines;
+}
+
+@for $item from 1 through length($color-headlines) {
+   h#{$item}  {
+     color: nth($color-headlines, $item);
+     text-shadow: 1px 1px black;
+   }
 }
