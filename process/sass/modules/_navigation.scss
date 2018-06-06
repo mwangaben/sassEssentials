@@ -1,4 +1,5 @@
 @import "../variables";
+@import "mixins";
 
 nav {
   header  & {
@@ -54,6 +55,9 @@ nav {
     margin-top: 20px;
     man-heihgt: 200px;
     background-color: darken($blue, 15%);
+    @include break(0, 500px){
+      display: none;
+    }
   }
 }
 
